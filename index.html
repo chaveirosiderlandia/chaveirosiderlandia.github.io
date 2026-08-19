@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Chaveiro Siderlândia - Cópias e confecção de chaves, abertura de portas e veículos, instalação de fechaduras, troca de cilindros e afiação de tesouras e alicates.">
+
+    <title>Chaveiro Siderlândia | Volta Redonda - RJ</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           CORES PRINCIPAIS
+        ========================= */
+
+        :root {
+            --preto: #0b0b0b;
+            --preto-claro: #151515;
+            --dourado: #d4af37;
+            --dourado-claro: #f0d77a;
+            --branco: #ffffff;
+            --cinza: #bdbdbd;
+        }
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            width: 100%;
+            background-color: #080808;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: var(--dourado);
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dourado);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212, 175, 55, 0.12),
+                    transparent 45%
+                ),
+                #0b0b0b;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+            color: var(--dourado);
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--cinza);
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 14px 28px;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .botao-dourado {
+            background-color: var(--dourado);
+            color: #000000;
+        }
+
+        .botao-dourado:hover {
+            background-color: var(--dourado-claro);
+            transform: translateY(-2px);
+        }
+
+        .botao-outline {
+            border: 1px solid var(--dourado);
+            color: var(--dourado);
+        }
+
+        .botao-outline:hover {
+            background-color: var(--dourado);
+            color: #000000;
+        }
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo-secao h2 {
+            color: var(--dourado);
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-secao p {
+            color: var(--cinza);
+        }
+
+        /* =========================
+           SERVIÇOS
+        ========================= */
+
+        #servicos {
+            background-color: #101010;
+        }
+
+        .servicos-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .servico {
+            background-color: var(--preto-claro);
+
+            border: 1px solid #292929;
+
+            border-radius: 10px;
+
+            padding: 30px 25px;
+
+            transition: 0.3s;
+        }
+
+        .servico:hover {
+            transform: translateY(-5px);
+
+            border-color: var(--dourado);
+
+            box-shadow:
+                0 10px 30px
+                rgba(212, 175, 55, 0.10);
+        }
+
+        .servico-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .servico h3 {
+            color: var(--dourado);
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .servico p {
+            color: var(--cinza);
+            font-size: 15px;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .sobre {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .sobre-texto h2 {
+            color: var(--dourado);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .sobre-texto p {
+            color: var(--cinza);
+            margin-bottom: 15px;
+        }
+
+        .destaque {
+            border-left: 3px solid var(--dourado);
+            padding-left: 20px;
+            margin-top: 25px;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        #contato {
+            background-color: #101010;
+        }
+
+        .contato-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .contato-box {
+            background-color: var(--preto-claro);
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            border: 1px solid #292929;
+        }
+
+        .contato-box h3 {
+            color: var(--dourado);
+            margin-bottom: 15px;
+        }
+
+        .contato-box p {
+            color: var(--cinza);
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background-color: #050505;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            border-top:
+                1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        footer p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--dourado);
+        }
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .servicos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sobre {
+                grid-template-columns: 1fr;
+            }
+
+            .contato-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            .hero {
+                min-height: 580px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .botao {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .titulo-secao h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <a href="#" class="logo">
+                Chaveiro <span>Siderlândia</span>
+            </a>
+
+            <nav>
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#servicos">
+                    Serviços
+                </a>
+
+                <a href="#sobre">
+                    Sobre
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         INÍCIO
+    ========================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>
+                🔑 Chaveiro Siderlândia
+            </h1>
+
+            <h2>
+                Segurança, confiança e qualidade em Volta Redonda
+            </h2>
+
+            <p>
+                Cópias e confecção de chaves, abertura de portas e
+                automóveis, instalação de fechaduras, troca de cilindros
+                e muito mais.
+            </p>
+
+            <div class="botoes">
+
+                <a
+                    href="https://wa.me/5524981829765"
+                    class="botao botao-dourado"
+                    target="_blank">
+                    📱 Falar pelo WhatsApp
+                </a>
+
+                <a
+                    href="#servicos"
+                    class="botao botao-outline">
+                    Ver nossos serviços
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVIÇOS
+    ========================= -->
+
+    <section id="servicos">
+
+        <div class="container">
+
+            <div class="titulo-secao">
+
+                <h2>
+                    Nossos Serviços
+                </h2>
+
+                <p>
+                    Soluções para chaves, fechaduras e afiações.
+                </p>
+
+            </div>
+
+
+            <div class="servicos-grid">
+
+
+                <div class="servico">
+
+                    <div class="servico-icon">
+                        🔑
+                    </div>
+
+                    <h3>
+                        Cópias e Confecção de Chaves
+                    </h3>
+
+                    <p>
+                        Cópias de chaves residenciais, comerciais,
+                        cadeados e automóveis sem chip.
+                    </p>
+
+                </div>
+
+
+                <div class="servico">
+
+                    <div class="servico-icon">
+                        🚪
+                    </div>
+
+                    <h3>
+                        Abertura de Portas e Portões
+                    </h3>
+
+                    <p>
+                        Abertura de portas, portões e fechaduras
+                        com atendimento profissional.
+                    </p>
+
+                </div>
+
+
+                <div class="servico">
+
+                    <div class="servico-icon">
+                        🚗
+                    </div>
+
+                    <h3>
+                        Abertura de Automóveis
+                    </h3>
+
+                    <p>
+                        Serviços de abertura para automóveis,
+                        incluindo veículos sem chave com chip.
+                    </p>
+
+                </div>
+
+
+                <div class="servico">
+
+                    <div class="servico-icon">
+                        🔒
+                    </div>
+
+                    <h3>
+                        Fechaduras e Cilindros
+                    </h3>
+
+                    <p>
+                        Instalação de fechaduras, troca de cilindros
+                        e manutenção de fechaduras em geral.
+                    </p>
+
+                </div>
+
+
+                <div class="servico">
+
+                    <div class="servico-icon">
+                        ✂️
+                    </div>
+
+                    <h3>
+                        Afiação
+                    </h3>
+
+                    <p>
+                        Afiação de alicates de cutícula,
+                        tesouras e outros instrumentos.
+                    </p>
+
+                </div>
+
+
+                <div class="servico">
+
+                    <div class="servico-icon">
+                        🛠️
+                    </div>
+
+                    <h3>
+                        Serviços de Chaveiro
+                    </h3>
+
+                    <p>
+                        Confecção de chaves e diversos serviços
+                        relacionados a fechaduras e segurança.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE
+    ========================= -->
+
+    <section id="sobre">
+
+        <div class="container">
+
+            <div class="sobre">
+
+
+                <div class="sobre-texto">
+
+                    <h2>
+                        Chaveiro Siderlândia
+                    </h2>
+
+                    <p>
+                        Atendimento em Siderlândia, Volta Redonda -
+                        RJ, oferecendo serviços de chaveiro para
+                        residências, comércios, cadeados e automóveis.
+                    </p>
+
+                    <p>
+                        Trabalhamos com cópias e confecção de chaves,
+                        abertura de portas e veículos, instalação de
+                        fechaduras, troca de cilindros e afiação.
+                    </p>
+
+                    <div class="destaque">
+
+                        <p>
+                            <strong>
+                                Precisou de um chaveiro?
+                            </strong>
+                        </p>
+
+                        <p>
+                            Entre em contato conosco pelo WhatsApp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <!-- FOTO DO COMÉRCIO SERÁ COLOCADA AQUI -->
+
+                    <div style="
+                        height: 320px;
+                        border: 1px solid #333;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #777;
+                        text-align: center;
+                        padding: 20px;
+                    ">
+
+                        📸
+                        <br>
+                        Em breve,
+                        fotos do Chaveiro Siderlândia
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================= -->
+
+    <section id="contato">
+
+        <div class="container">
+
+            <div class="titulo-secao">
+
+                <h2>
+                    Entre em Contato
+                </h2>
+
+                <p>
+                    Estamos em Siderlândia, Volta Redonda - RJ.
+                </p>
+
+            </div>
+
+
+            <div class="contato-grid">
+
+
+                <div class="contato-box">
+
+                    <h3>
+                        📍 Endereço
+                    </h3>
+
+                    <p>
+                        Avenida Presidente Kennedy, 6171
+                    </p>
+
+                    <p>
+                        Siderlândia - Volta Redonda - RJ
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Avenida+Presidente+Kennedy+6171+Siderlândia+Volta+Redonda+RJ"
+                        target="_blank"
+                        class="botao botao-outline">
+
+                        📍 Abrir no Google Maps
+
+                    </a>
+
+                </div>
+
+
+                <div class="contato-box">
+
+                    <h3>
+                        📱 WhatsApp
+                    </h3>
+
+                    <p>
+                        (24) 98182-9765
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="https://wa.me/5524981829765"
+                        target="_blank"
+                        class="botao botao-dourado">
+
+                        Falar pelo WhatsApp
+
+                    </a>
+
+                </div>
+
+
+                <div class="contato-box">
+
+                    <h3>
+                        🕐 Horário de Funcionamento
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Segunda a sexta:
+                        </strong>
+                    </p>
+
+                    <p>
+                        08:30 às 11:30
+                    </p>
+
+                    <p>
+                        13:30 às 17:00
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <strong>
+                            Sábado:
+                        </strong>
+                    </p>
+
+                    <p>
+                        08:30 às 12:00
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <strong>
+                            Domingo:
+                        </strong>
+                    </p>
+
+                    <p>
+                        Fechado
+                    </p>
+
+                </div>
+
+
+                <div class="contato-box">
+
+                    <h3>
+                        📸 Instagram
+                    </h3>
+
+                    <p>
+                        Acompanhe nosso trabalho e confira
+                        nossas novidades.
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="https://www.instagram.com/chaveiro_siderlandia/"
+                        target="_blank"
+                        class="botao botao-outline">
+
+                        Ver Instagram
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <strong>
+                Chaveiro Siderlândia
+            </strong>
+            — Volta Redonda - RJ
+        </p>
+
+        <p style="margin-top: 8px;">
+            Serviços de chaveiro, chaves, fechaduras e afiações.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
